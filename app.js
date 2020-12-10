@@ -5,6 +5,8 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const numRouter = require('./routes/num');
+const palinRoute = require('./routes/palindrome');
 
 const app = express();
 
@@ -15,6 +17,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/user', usersRouter);
+app.use('/num', numRouter);
+app.use('/palindrome', palinRoute);
 
 module.exports = app;
