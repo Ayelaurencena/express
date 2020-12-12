@@ -7,6 +7,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const numRouter = require('./routes/num');
 const palinRoute = require('./routes/palindrome');
+const primosRoute = require('./routes/primos')
 
 const app = express();
 
@@ -20,5 +21,6 @@ app.use('/', indexRouter);
 app.use('/user', usersRouter);
 app.use('/num', numRouter);
 app.use('/palindrome', palinRoute);
+app.use('/primos',primosRoute);
 
 module.exports = app;
